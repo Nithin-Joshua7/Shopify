@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(cookieParser());
 app.use(
     cors({
-        origin:"http://localhost:5173",
+        origin:"https://shopify-dhed.onrender.com",
         credentials:true
     })
 )
@@ -25,6 +25,6 @@ mongoose.connect(url)
 app.use("/api/auth", authRoutes);
 app.use("/api/products",router)
 
-app.listen(4000,"localhost",()=>{
+app.listen(process.env.PORT || 4000, process.env.HOST || "0.0.0.0",()=>{
     console.log("Server is running at http://localhost:4000")
 })
