@@ -1,11 +1,21 @@
-import { Button, Container, Flex, HStack, Text, useColorMode } from "@chakra-ui/react";
+import {
+  Button,
+  Container,
+  Flex,
+  HStack,
+  Text,
+  useColorMode,
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { PlusSquareIcon } from "@chakra-ui/icons";
 import { IoMoon } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
+import { FiLogOut } from "react-icons/fi";
+import useAuthStore from "../store/useAuthStore"; // adjust path
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
+  const logout = useAuthStore((state) => state.logout);
 
   return (
     <Container maxW={{ base: "100%", lg: "1140px" }} px={4}>
@@ -23,7 +33,7 @@ const Navbar = () => {
           bgGradient="linear(to-r, cyan.400, blue.500)"
           bgClip="text"
         >
-          <Link to="/">Product Store 🛒</Link>
+          <Link to="/" className="normal-case">Shopify</Link>
         </Text>
 
         <HStack spacing={2} alignItems="center">
@@ -34,6 +44,9 @@ const Navbar = () => {
           </Link>
           <Button onClick={toggleColorMode}>
             {colorMode === "light" ? <IoMoon /> : <LuSun size="20" />}
+          </Button>
+          <Button onClick={logout}>
+            <FiLogOut size="18" />
           </Button>
         </HStack>
       </Flex>

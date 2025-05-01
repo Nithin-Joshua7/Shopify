@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useProductStore } from "../store/product";
 import ProductCard from "./Productcard";
+import Navbar from "../navbar/Navbar";
 
 const HomePage = () => {
 	const { fetchProducts, products } = useProductStore();
@@ -13,6 +14,8 @@ const HomePage = () => {
 	console.log("products", products);
 
 	return (
+		<>
+		<Navbar/>
 		<Container maxW='container.xl' py={12}>
 			<VStack spacing={8}>
 				<Text
@@ -22,7 +25,7 @@ const HomePage = () => {
 					bgClip={"text"}
 					textAlign={"center"}
 				>
-					Current Products 🚀
+					Your Products 🚀
 				</Text>
 
 				<SimpleGrid
@@ -51,6 +54,7 @@ const HomePage = () => {
 				)}
 			</VStack>
 		</Container>
+		</>
 	);
 };
 export default HomePage;
