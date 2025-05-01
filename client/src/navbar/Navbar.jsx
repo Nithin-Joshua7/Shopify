@@ -11,7 +11,7 @@ import { PlusSquareIcon } from "@chakra-ui/icons";
 import { IoMoon } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
 import { FiLogOut } from "react-icons/fi";
-import useAuthStore from "../store/useAuthStore"; // adjust path
+import useAuthStore from "../store/useauthstore"; // adjust path
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
