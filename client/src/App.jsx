@@ -4,14 +4,26 @@ import Homepage from "./components/Homepage";
 import Createpage from "./components/Createpage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
-import useAuthStore from "./store/useauthstore";
+
 import { Toaster } from "react-hot-toast";
+import useAuthStore from "./store/useAuthStore";
 
 function App() {
   
   const { checkAuth, authUser, isCheckingAuth } = useAuthStore()
-  console.log(authUser);
   
+  useEffect(() => {
+    checkAuth();
+  }, [checkAuth]);
+
+  console.log({ authUser });
+
+  if (isCheckingAuth && !authUser)
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <Loader className="size-10 animate-spin" />
+      </div>
+    );
   return (
     <Box
       minH="100vh"
