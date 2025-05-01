@@ -1,5 +1,5 @@
 import { create } from "zustand";
-
+import { axiosInstance } from "../../lib/axios";
 export const useProductStore = create((set) => ({
 	products: [],
 	setProducts: (products) => set({ products }),
