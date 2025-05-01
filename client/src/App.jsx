@@ -9,7 +9,7 @@ import { Toaster } from "react-hot-toast";
 import useAuthStore from "./store/useauthstore";
 import { useEffect } from "react";
 import { Loader } from "lucide-react";
-
+import { Flex } from "@chakra-ui/react";
 
 function App() {
   
