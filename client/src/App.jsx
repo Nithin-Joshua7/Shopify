@@ -6,7 +6,8 @@ import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 
 import { Toaster } from "react-hot-toast";
-import useAuthStore from "./store/useAuthStore";
+import useAuthStore from "./store/useauthstore";
+
 
 function App() {
   
