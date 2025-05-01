@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL:"http://localhost:4000/api",
+  baseURL:"https://shopify-server-6vzj.onrender.com/api",
   withCredentials: true,
 });
