@@ -23,9 +23,9 @@ function App() {
 
   if (isCheckingAuth && !authUser)
     return (
-    <Flex align="center" justify="center" h="100vh">
+    <div className="flex justify-center item-center">
       <Loader className="size-10 animate-spin" />
-    </Flex>
+    </div>
     );
   return (
     <Box
