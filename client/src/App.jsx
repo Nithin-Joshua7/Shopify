@@ -30,6 +30,7 @@ function App() {
      
     >
        <Box bg="red.300" p={4}>Loading...</Box>
+      </Flex>
     );
   return (
     <Box
