@@ -23,9 +23,11 @@ function App() {
 
   if (isCheckingAuth && !authUser)
     return (
-    <div className=" h-screen flex justify-center items-center">
-      <Loader className="size-10 animate-spin" />
-    </div>
+   <div className="h-screen flex items-center">
+  <div className="mx-auto">
+    <Loader className="size-10 animate-spin" />
+  </div>
+</div>
     );
   return (
     <Box
