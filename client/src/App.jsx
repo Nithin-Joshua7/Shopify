@@ -29,8 +29,7 @@ function App() {
       align="center"
       bg={useColorModeValue("gray.100", "gray.900")}
     >
-      <Loader className="size-10 animate-spin" />
-    </Flex>
+       <Box bg="red.300" p={4}>Loading...</Box>
     );
   return (
     <Box
