@@ -27,7 +27,7 @@ function App() {
       height="100vh"
       justify="center"
       align="center"
-      bg={useColorModeValue("gray.100", "gray.900")}
+     
     >
        <Box bg="red.300" p={4}>Loading...</Box>
     );
