@@ -23,11 +23,14 @@ function App() {
 
   if (isCheckingAuth && !authUser)
     return (
-   <div className="h-screen flex items-center">
-  <div className="mx-auto">
-    <Loader className="size-10 animate-spin" />
-  </div>
-</div>
+    <Flex
+      height="100vh"
+      justify="center"
+      align="center"
+      bg={useColorModeValue("gray.100", "gray.900")}
+    >
+      <Loader className="size-10 animate-spin" />
+    </Flex>
     );
   return (
     <Box
