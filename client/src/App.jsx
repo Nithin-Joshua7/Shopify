@@ -23,14 +23,14 @@ function App() {
 
   if (isCheckingAuth && !authUser)
     return (
-    <Flex
+  <Flex
       height="100vh"
       justify="center"
       align="center"
-     
+      bg={useColorModeValue("gray.100", "gray.900")}
     >
-       <Box bg="red.300" p={4}>Loading...</Box>
-      </Flex>
+      <Loader className="size-10 animate-spin" />
+    </Flex>
     );
   return (
     <Box
